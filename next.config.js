@@ -1,7 +1,11 @@
-module.exports = {
-  reactStrictMode: false,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    unoptimized: true, // Required for GitHub Pages
   },
-  output: "standalone",
+  basePath: "/developer-portfolio", // Replace with your GitHub repo name
+  assetPrefix: "/developer-portfolio/",
 };
+
+module.exports = nextConfig;
